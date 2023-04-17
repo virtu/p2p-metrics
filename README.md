@@ -29,15 +29,15 @@ each DNS seed.
 
 #### Pristine nodes
 
-The `dns_seed_pristine_node_count.csv` provides the number of pristine nodes provided by
-each DNS seed.
+The file `dns_seed_pristine_node_count.csv` provides the number of pristine nodes
+provided by each DNS seed.
 
 The file `dns_seed_pristine_node_share.csv` holds the share of pristine nodes provided
 by each DNS seed (i.e., the ratio of pristine to overall nodes provided by a seed).
 
 #### Stale nodes
 
-The `dns_seed_stale_node_count.csv` provides the number of stale nodes provided by
+The file `dns_seed_stale_node_count.csv` provides the number of stale nodes provided by
 each DNS seed.
 
 The file `dns_seed_stale_node_share.csv` holds the share of stale nodes provided
@@ -45,16 +45,16 @@ by each DNS seed (i.e., the ratio of stale to overall nodes provided by a seed).
 
 #### Reachable nodes
 
-The `dns_seed_reachable_node_count.csv` provides the number of reachable nodes provided
-by each DNS seed.
+The file `dns_seed_reachable_node_count.csv` provides the number of reachable nodes
+provided by each DNS seed.
 
 The file `dns_seed_reachable_node_share.csv` holds the share of reachable nodes provided
 by each DNS seed (i.e., the ratio of reachable to overall nodes provided by a seed).
 
 #### Unreachable nodes
 
-The `dns_seed_unreachable_node_count.csv` provides the number of unreachable nodes provided
-by each DNS seed.
+The file `dns_seed_unreachable_node_count.csv` provides the number of unreachable nodes
+provided by each DNS seed.
 
 The file `dns_seed_unreachable_node_share.csv` holds the share of unreachable nodes
 provided by each DNS seed (i.e., the ratio of unreachable to overall nodes provided by a
@@ -62,8 +62,8 @@ seed).
 
 #### Duplicate nodes
 
-The `dns_seed_duplicate_node_count.csv` provides the number of duplicate nodes provided
-by each DNS seed.
+The file `dns_seed_duplicate_node_count.csv` provides the number of duplicate nodes
+provided by each DNS seed.
 
 The file `dns_seed_duplicate_node_share.csv` holds the share of duplicate nodes provided
 by each DNS seed (i.e., the ratio of duplicate to overall nodes provided by a seed).
