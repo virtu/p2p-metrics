@@ -6,51 +6,67 @@ Health metrics for Bitcoin's P2P network
 
 ### DNS seed metrics
 
-#### Operational summary
+#### DNS seed summary
 
-The file `dns_seed_categories_node_count.csv` contains a summary of the combined node
-set which is comprised by the nodes received by all DNS seeds:
-- The `pristine` column corresponds to the number of nodes that were unique, reachable
-  and not stale (i.e., not part of the previous day's node set).
+The file `dns_seed_summary.csv` contains a summary of the combined node set which is
+comprised by the nodes received by all DNS seeds:
+- The `total` column indicates the total number of nodes received by all DNS seeds
+- The `unique` column represents the number of unique nodes received by all seeds
+- The `duplicate` column contains the number of duplicate nodes (i.e. nodes that were
+  advertised by multiple peers). When a node is advertised _n_ times, one of the nodes
+  is counted as unique; the remaining _n-1_ nodes are counted as duplicates.
+- The `reachable` and `unreachable` columns show the number of nodes that could and
+  could not be reached. Duplicates are not included in these categories.
 - The `stale` column gives the number of nodes that were already received on the
   previous days. Unreachable and duplicate nodes are not included in this category.
-- The `unreachable` column lists the number of nodes that could not be reached.
-  Duplicates are not included in this category.
-- The `unreachable` column contains the number of duplicate nodes (i.e. nodes that were
-  advertised by multiple peers). When a node is advertised _n_ times, one of the nodes
-  corresponds to an unique node; the remaining _n-1_ nodes are counted as duplicates.
+- The `pristine` column corresponds to the number of nodes that were unique, reachable
+  and not stale (i.e., not part of the previous day's node set).
+
+#### Advertised nodes
+
+The file `dns_seed_advertised_node_count.csv` provides the number of nodes advertised by
+each DNS seed.
 
 #### Pristine nodes
 
-The file `dns_seed_pristine_node_count.csv` provides a breakdown of the number of
-pristine nodes by each individual seed. The file `dns_seed_pristine_node_share.csv`
-provides a breakdown of the share of pristine nodes provided by each individual seed. In
-addition to per-seed data, the the `overall` column indicates to the number respectively
-share of pristine nodes in the set of nodes received by all peers (without duplicates).
+The `dns_seed_pristine_node_count.csv` provides the number of pristine nodes provided by
+each DNS seed.
+
+The file `dns_seed_pristine_node_share.csv` holds the share of pristine nodes provided
+by each DNS seed (i.e., the ratio of pristine to overall nodes provided by a seed).
 
 #### Stale nodes
 
-The file `dns_seed_stale_node_count.csv` provides a breakdown of the number of stale
-nodes by each individual seed. The file `dns_seed_stale_node_share.csv` provides a
-breakdown of the share of stale nodes provided by each individual seed. In addition to
-per-seed data, the `overall` column indicates to the number respectively share of stale
-nodes in the set of nodes received by all peers (without duplicates).
+The `dns_seed_stale_node_count.csv` provides the number of stale nodes provided by
+each DNS seed.
+
+The file `dns_seed_stale_node_share.csv` holds the share of stale nodes provided
+by each DNS seed (i.e., the ratio of stale to overall nodes provided by a seed).
+
+#### Reachable nodes
+
+The `dns_seed_reachable_node_count.csv` provides the number of reachable nodes provided
+by each DNS seed.
+
+The file `dns_seed_reachable_node_share.csv` holds the share of reachable nodes provided
+by each DNS seed (i.e., the ratio of reachable to overall nodes provided by a seed).
 
 #### Unreachable nodes
 
-The file `dns_seed_unreachable_node_count.csv` provides a breakdown of the number of
-unreachable nodes by each individual seed. The file
-`dns_seed_unreachable_node_share.csv` provides a breakdown of the share of unreachable
-nodes provided by each individual seed. In addition to per-seed data, the `overall`
-column indicates to the number respectively share of unreachable nodes in the set of
-nodes received by all peers (without duplicates).
+The `dns_seed_unreachable_node_count.csv` provides the number of unreachable nodes provided
+by each DNS seed.
+
+The file `dns_seed_unreachable_node_share.csv` holds the share of unreachable nodes
+provided by each DNS seed (i.e., the ratio of unreachable to overall nodes provided by a
+seed).
 
 #### Duplicate nodes
 
-The file `dns_seed_duplicate_node_count.csv` provides a breakdown of the number of
-duplicate nodes by each individual seed. The file `dns_seed_duplicate_node_share.csv`
-provides a breakdown of the share of duplicate nodes provided by each individual seed.
+The `dns_seed_duplicate_node_count.csv` provides the number of duplicate nodes provided
+by each DNS seed.
+
+The file `dns_seed_duplicate_node_share.csv` holds the share of duplicate nodes provided
+by each DNS seed (i.e., the ratio of duplicate to overall nodes provided by a seed).
+
 The number and share of duplicates is calculated based on how many of the nodes
-advertised based by a peer were provided by all other seeds. In addition to per-seed
-data, the `overall` column indicates to the number respectively share of duplicate nodes
-in the set of nodes received by all peers.
+advertised based by a peer were provided by all other seeds.
