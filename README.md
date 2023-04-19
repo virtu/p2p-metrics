@@ -70,3 +70,17 @@ by each DNS seed (i.e., the ratio of duplicate to overall nodes provided by a se
 
 The number and share of duplicates is calculated based on how many of the nodes
 advertised based by a peer were provided by all other seeds.
+
+### P2P metrics
+
+#### Reachable Bitcoin nodes
+
+The file `p2p_reachable_node_count.csv` contains the total number of reachable Bitcoin
+nodes, as well as the number of reachable nodes by different network types.
+
+The file `p2p_reachable_node_count.csv` contains the month-over-month (30 days)
+percentage change in total number of reachable Bitcoin nodes, as well as the change in
+number of reachable nodes by different network types.
+
+The file `p2p_reachable_node_share.csv` comprises the share of nodes contributed by
+different network types.
