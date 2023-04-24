@@ -84,3 +84,7 @@ number of reachable nodes by different network types.
 
 The file `p2p_reachable_node_share.csv` comprises the share of nodes contributed by
 different network types.
+
+The file `p2p_long_term_reachable_node_count.csv` provides the total number of long-term
+reachable Bitcoin nodes (i.e., nodes that were reachable on thirty successive days) as
+as well as the number of long-term reachable nodes by different network types.
